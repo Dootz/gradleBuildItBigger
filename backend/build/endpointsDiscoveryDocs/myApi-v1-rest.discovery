@@ -24,10 +24,6 @@
    "httpMethod": "POST",
    "id": "myApi.putJoke",
    "path": "putJoke",
-   "request": {
-    "$ref": "MyBean",
-    "parameterName": "resource"
-   },
    "response": {
     "$ref": "MyBean"
    },
@@ -91,9 +87,6 @@
    "id": "MyBean",
    "properties": {
     "data": {
-     "type": "string"
-    },
-    "joke": {
      "type": "string"
     }
    },

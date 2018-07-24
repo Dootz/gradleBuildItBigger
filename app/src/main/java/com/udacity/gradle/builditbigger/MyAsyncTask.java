@@ -37,7 +37,8 @@ public class MyAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
 
         try {
-            return myApiService.putJoke(new MyBean()).execute().getJoke();
+            MyBean bean = myApiService.putJoke().execute();
+            return bean.getData();
         } catch (IOException e) {
             return e.getMessage();
         }

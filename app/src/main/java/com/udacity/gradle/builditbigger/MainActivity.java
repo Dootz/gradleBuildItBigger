@@ -43,14 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    @SuppressWarnings("unchecked")
     public void tellJoke(View view) {
-        JokeTelling jokeTelling = new JokeTelling();
-        String joke = jokeTelling.tellJoke();
-        Intent intent = new Intent(this, JokeDisplayActivity.class);
-        intent.putExtra(JokeDisplayActivity.INTENT_JOKE, joke);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        new MyAsyncTask(this).execute();
     }
 
 
